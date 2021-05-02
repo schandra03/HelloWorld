@@ -4,8 +4,8 @@ pipeline {
         stage('Hello World') {
             steps {
                 echo "Execute Java File"
-                java PrimeNumber.java
-                javac PrimeNumber
+                sh 'java PrimeNumber.java'
+                sh 'javac PrimeNumber'
             }
         }
     }
