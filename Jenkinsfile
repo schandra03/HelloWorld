@@ -3,7 +3,9 @@ pipeline {
     stages {
         stage('Hello World') {
             steps {
-                echo "Test First"
+                echo "Execute Java File"
+                java PrimeNumber.java
+                javac PrimeNumber
             }
         }
     }
