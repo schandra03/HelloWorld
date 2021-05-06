@@ -11,14 +11,14 @@ pipeline {
                 echo "Compile Java File"
                 sh 'chmod 777 PrimeNumber.java'
                 sh 'ls -l'
-                sh 'java PrimeNumber.java'
+                sh 'javac PrimeNumber.java'
             }
         }
         stage('Execute') {
             steps {
                 echo "Execute Java File"
                 sh 'chmod 777 PrimeNumber.class'
-                sh 'javac PrimeNumber'
+                sh 'java PrimeNumber'
             }
         }
     }
