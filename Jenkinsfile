@@ -9,17 +9,14 @@ pipeline {
         stage('Compile') {
             steps {
                 echo "Compile Java File"
-                sh 'pwd'
-                sh 'ls -l'
-                sh 'java -version'
+                sh 'chmod 777 PrimeNumber.java'
                 sh 'java PrimeNumber.java'
             }
         }
         stage('Execute') {
             steps {
                 echo "Execute Java File"
-                sh 'pwd'
-                sh 'ls -l'
+                sh 'chmod 777 PrimeNumber.class'
                 sh 'javac PrimeNumber'
             }
         }
