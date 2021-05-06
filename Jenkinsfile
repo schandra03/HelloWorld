@@ -11,7 +11,7 @@ pipeline {
                 echo "Compile Java File"
                 sh 'pwd'
                 sh 'ls -l'
-                sh 'java --version'
+                sh 'java -version'
                 sh 'java PrimeNumber.java'
             }
         }
