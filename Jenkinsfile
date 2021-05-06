@@ -1,7 +1,7 @@
 pipeline {
     agent any 
     stages {
-        stage('clone') {
+        stage('setup') {
             steps {
                 echo "Setup Workspace"
             }
