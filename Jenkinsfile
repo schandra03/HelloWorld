@@ -13,7 +13,7 @@ pipeline {
                 sh 'touch test.txt'
                 sh 'git add --all'
                 sh 'git commit -m "Adding test.txt file"'
-                sh 'git push --set-upstream origin testing-branch'
+                sh 'git push origin testing-branch'
             }
         }
        /* stage('Compile') {
