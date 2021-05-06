@@ -4,7 +4,6 @@ pipeline {
         stage('clone') {
             steps {
                 echo "Setup Workspace"
-                git branch: 'testing-branch', credentialsId: 'shubhavi', url: 'https://github.com/schandra03/HelloWorld.git'
             }
         }
       /*  stage('Compile') {
