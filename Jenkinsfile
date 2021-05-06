@@ -10,6 +10,7 @@ pipeline {
             steps {
                 echo "Compile Java File"
                 sh 'chmod 777 PrimeNumber.java'
+                sh 'ls -l'
                 sh 'java PrimeNumber.java'
             }
         }
