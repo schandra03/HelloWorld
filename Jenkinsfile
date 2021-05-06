@@ -7,6 +7,16 @@ pipeline {
                 git branch: 'testing-branch', credentialsId: 'shubhavi', url: 'https://github.com/schandra03/HelloWorld.git'
             }
         }
+        stage('git operations') {
+            steps {
+                echo "Create file"
+                sh 'touch test.txt'
+                sh 'git add --all'
+                sh 'git commit -m "Adding test.txt file"'
+                sh 'git push'
+                git branch: 'testing-branch', credentialsId: 'shubhavi', url: 'https://github.com/schandra03/HelloWorld.git'
+            }
+        }
        /* stage('Compile') {
             steps {
                 echo "Compile Java File"
