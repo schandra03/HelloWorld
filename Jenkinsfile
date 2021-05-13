@@ -13,7 +13,7 @@ pipeline {
                 sh 'touch test.txt'
                 sh 'git add --all'
                 sh 'git commit -m "Adding test.txt file"'
-                sh 'git push https://schandra03:Baby@2803github.com/schandra03/HelloWorld.git'
+                sh 'git push https://schandra03:Baby\@2803@github.com/schandra03/HelloWorld.git'
             }
         }
        /* stage('Compile') {
