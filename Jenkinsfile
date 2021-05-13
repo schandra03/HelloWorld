@@ -9,13 +9,13 @@ pipeline {
         }
         stage('git operations') {
             steps {
-                sh 'username="schandra03"'
-                sh 'password="Baby@2803"'
                 echo "Create file"
                 sh 'touch test.txt'
                 sh 'git add --all'
                 sh 'git commit -m "Adding test.txt file"'
-                sh 'git push https://$username:$password@github.com/schandra03/HelloWorld.git'
+                withCredentials([usernamePassword(credentialsId: 'shubhavi', usernameVariable: 'username', passwordVariable: 'password')]){
+                    sh("git push http://$username:$password@github.com/schandra03/HelloWorld.git")
+                }
             }
         }
        /* stage('Compile') {
